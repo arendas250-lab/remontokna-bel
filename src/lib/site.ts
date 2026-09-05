@@ -1,7 +1,7 @@
 export const SITE = {
   name: "ремонтокна.бел",
-  phone: "+375 (29) 000-00-00",
-  phoneHref: "tel:+375290000000",
+  phone: "+375 (29) 225-95-66",
+  phoneHref: "tel:+375292259566",
   email: "info@remontokna.by",
   addressShort: "г. Гродно, ул. Врублевского, 3",
   hours: "Без выходных, с 8:00 до 22:00",
