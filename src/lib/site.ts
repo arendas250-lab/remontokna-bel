@@ -25,16 +25,16 @@ export const MAIN_PRICES: Price[] = [
 ];
 
 export const PROBLEMS: Price[] = [
-  { title: "Не закрывается", price: "от 15 BYN" },
-  { title: "Продувается", price: "от 15 BYN" },
-  { title: "Запотевает", price: "от 15 BYN" },
-  { title: "Не открывается", price: "от 15 BYN" },
-  { title: "Перекошено", price: "от 15 BYN" },
-  { title: "Скрипит", price: "от 15 BYN" },
-  { title: "Плохо закрывается", price: "от 15 BYN" },
-  { title: "Протекает", price: "от 15 BYN" },
-  { title: "Промерзает", price: "от 15 BYN" },
-  { title: "Шум с улицы", price: "от 15 BYN" },
+  { title: "Не закрывается", price: "от 25 BYN" },
+  { title: "Продувается", price: "от 28 BYN" },
+  { title: "Запотевает", price: "от 35 BYN" },
+  { title: "Не открывается", price: "от 25 BYN" },
+  { title: "Перекошено", price: "от 40 BYN" },
+  { title: "Скрипит", price: "от 25 BYN" },
+  { title: "Плохо закрывается", price: "от 30 BYN" },
+  { title: "Протекает", price: "от 32 BYN" },
+  { title: "Промерзает", price: "от 38 BYN" },
+  { title: "Шум с улицы", price: "от 45 BYN" },
 ];
 
 export const FITTING_PRICES: Price[] = [
