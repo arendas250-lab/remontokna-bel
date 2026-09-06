@@ -1,7 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { useModal } from "./modal-context";
-import { SITE, SERVICE_MENU } from "@/lib/site";
+import { SITE } from "@/lib/site";
+import { SERVICES, SERVICE_GROUPS } from "@/lib/services";
 
 export default function Footer() {
   const { open } = useModal();
@@ -34,15 +36,15 @@ export default function Footer() {
             </button>
           </div>
 
-          {SERVICE_MENU.map((group) => (
-            <div key={group.title}>
-              <h4 className="mb-3 text-sm font-bold uppercase tracking-wide text-white/50">{group.title}</h4>
+          {SERVICE_GROUPS.map((group) => (
+            <div key={group}>
+              <h4 className="mb-3 text-sm font-bold uppercase tracking-wide text-white/50">{group}</h4>
               <ul className="space-y-2 text-sm">
-                {group.items.map((item) => (
-                  <li key={item}>
-                    <a href="#services" className="transition hover:text-white">
-                      {item}
-                    </a>
+                {SERVICES.filter((s) => s.group === group).map((s) => (
+                  <li key={s.slug}>
+                    <Link href={`/uslugi/${s.slug}`} className="transition hover:text-white">
+                      {s.title}
+                    </Link>
                   </li>
                 ))}
               </ul>

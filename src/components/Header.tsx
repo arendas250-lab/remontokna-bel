@@ -5,12 +5,12 @@ import { useModal } from "./modal-context";
 import { SITE } from "@/lib/site";
 
 const NAV_LINKS = [
-  { href: "#prices", label: "Цены" },
-  { href: "#services", label: "Услуги" },
-  { href: "#works", label: "Работы" },
-  { href: "#reviews", label: "Отзывы" },
-  { href: "#about", label: "О компании" },
-  { href: "#contacts", label: "Контакты" },
+  { href: "/#prices", label: "Цены" },
+  { href: "/uslugi", label: "Услуги" },
+  { href: "/#works", label: "Работы" },
+  { href: "/#reviews", label: "Отзывы" },
+  { href: "/#about", label: "О компании" },
+  { href: "/#contacts", label: "Контакты" },
 ];
 
 export default function Header() {
@@ -20,7 +20,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 bg-navy text-white shadow-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
-        <a href="#top" className="flex items-center gap-2 text-lg font-extrabold tracking-tight sm:text-xl">
+        <a href="/" className="flex items-center gap-2 text-lg font-extrabold tracking-tight sm:text-xl">
           <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-white">🪟</span>
           <span>
             ремонт<span className="text-accent">окна</span>.бел
