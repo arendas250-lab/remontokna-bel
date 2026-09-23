@@ -38,7 +38,7 @@ export default function Footer() {
 
           {SERVICE_GROUPS.map((group) => (
             <div key={group}>
-              <h4 className="mb-3 text-sm font-bold uppercase tracking-wide text-white/50">{group}</h4>
+              <p className="mb-3 text-sm font-bold uppercase tracking-wide text-white/50">{group}</p>
               <ul className="space-y-2 text-sm">
                 {SERVICES.filter((s) => s.group === group).map((s) => (
                   <li key={s.slug}>
