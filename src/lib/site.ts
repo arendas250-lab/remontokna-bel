@@ -1,5 +1,7 @@
 export const SITE = {
   name: "ремонтокна.бел",
+  // ремонтокна.бел в punycode — валидаторы разметки надёжнее понимают ASCII-домен
+  url: "https://xn--80ajphfbebny.xn--90ais",
   phone: "+375 (29) 225-95-66",
   phoneHref: "tel:+375292259566",
   email: "info@remontokna.by",
