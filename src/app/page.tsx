@@ -11,7 +11,12 @@ import FaqSection from "@/components/FaqSection";
 import AreaSection from "@/components/AreaSection";
 import Footer from "@/components/Footer";
 import FloatingCallButton from "@/components/FloatingCallButton";
+import type { Metadata } from "next";
 import { SITE, MAIN_PRICES, FITTING_PRICES, PROBLEMS, type Price } from "@/lib/site";
+
+export const metadata: Metadata = {
+  alternates: { canonical: `${SITE.url}/` },
+};
 
 const BUSINESS_ID = `${SITE.url}/#organization`;
 

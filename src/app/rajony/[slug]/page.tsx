@@ -23,7 +23,7 @@ export async function generateMetadata({
   const district = getDistrict(slug);
   if (!district) return {};
 
-  const url = `https://remontokna.by/rajony/${district.slug}`;
+  const url = `${SITE.url}/rajony/${district.slug}/`;
 
   return {
     title: district.metaTitle,
@@ -83,13 +83,13 @@ export default async function DistrictPage({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Главная", item: "https://remontokna.by/" },
-      { "@type": "ListItem", position: 2, name: "Районы выезда", item: "https://remontokna.by/#area" },
+      { "@type": "ListItem", position: 1, name: "Главная", item: `${SITE.url}/` },
+      { "@type": "ListItem", position: 2, name: "Районы выезда", item: `${SITE.url}/#area` },
       {
         "@type": "ListItem",
         position: 3,
         name: district.name,
-        item: `https://remontokna.by/rajony/${district.slug}`,
+        item: `${SITE.url}/rajony/${district.slug}/`,
       },
     ],
   };

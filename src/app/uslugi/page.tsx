@@ -3,13 +3,14 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingCallButton from "@/components/FloatingCallButton";
+import { SITE } from "@/lib/site";
 import { SERVICES, SERVICE_GROUPS } from "@/lib/services";
 
 export const metadata: Metadata = {
   title: "Все услуги по ремонту окон в Гродно — ремонтокна.бел",
   description:
     "Полный каталог услуг по ремонту и обслуживанию окон в Гродно: регулировка, утепление, замена фурнитуры, уплотнителя, москитные сетки. Цены и описание каждой услуги.",
-  alternates: { canonical: "https://remontokna.by/uslugi" },
+  alternates: { canonical: `${SITE.url}/uslugi/` },
 };
 
 export default function ServicesIndexPage() {
@@ -19,7 +20,7 @@ export default function ServicesIndexPage() {
     itemListElement: SERVICES.map((s, i) => ({
       "@type": "ListItem",
       position: i + 1,
-      url: `https://remontokna.by/uslugi/${s.slug}`,
+      url: `${SITE.url}/uslugi/${s.slug}/`,
       name: `${s.title} в Гродно`,
     })),
   };

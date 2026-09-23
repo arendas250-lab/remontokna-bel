@@ -25,7 +25,7 @@ export async function generateMetadata({
   const service = getService(slug);
   if (!service) return {};
 
-  const url = `https://remontokna.by/uslugi/${service.slug}`;
+  const url = `${SITE.url}/uslugi/${service.slug}/`;
 
   return {
     title: service.metaTitle,
@@ -76,7 +76,7 @@ export default async function ServicePage({
       "@type": "Offer",
       priceCurrency: "BYN",
       price: priceNumber,
-      url: `https://remontokna.by/uslugi/${service.slug}`,
+      url: `${SITE.url}/uslugi/${service.slug}/`,
     },
   };
 
@@ -84,13 +84,13 @@ export default async function ServicePage({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Главная", item: "https://remontokna.by/" },
-      { "@type": "ListItem", position: 2, name: "Услуги", item: "https://remontokna.by/uslugi" },
+      { "@type": "ListItem", position: 1, name: "Главная", item: `${SITE.url}/` },
+      { "@type": "ListItem", position: 2, name: "Услуги", item: `${SITE.url}/uslugi/` },
       {
         "@type": "ListItem",
         position: 3,
         name: service.title,
-        item: `https://remontokna.by/uslugi/${service.slug}`,
+        item: `${SITE.url}/uslugi/${service.slug}/`,
       },
     ],
   };
